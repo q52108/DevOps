@@ -1,0 +1,17 @@
+name: Say Hello 
+  
+on: 
+  push: 
+    branches: [ "main" ] 
+
+jobs: 
+  say-hello: 
+    runs-on: ubuntu-latest 
+    steps: 
+      - name: Checkout Repo 
+        uses: actions/checkout@v4
+
+      - name: Run Hello Script 
+        run: | 
+          echo "自動執行中：" 
+          bash hello.sh 
